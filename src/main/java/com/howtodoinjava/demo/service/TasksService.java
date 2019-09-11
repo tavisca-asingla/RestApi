@@ -13,7 +13,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @Setter
 public class TasksService {
-    @Autowired private final MockTaskProvider mockTaskProvider;
+    @Autowired
+    private final MockTaskProvider mockTaskProvider;
 
     public boolean add(TaskDto dto) {
         return mockTaskProvider.add(dto);

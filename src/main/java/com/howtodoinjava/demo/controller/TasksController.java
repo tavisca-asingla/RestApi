@@ -56,7 +56,7 @@ public class TasksController {
     public ResponseEntity<?> partialUpdateTask(
             @RequestParam String newTask, @PathVariable("id") long id) {
 
-        service.updateTaskById( id,newTask);
-        return ResponseEntity.ok("resource Task updated");
+        boolean result = service.updateTaskById( id,newTask);
+        return ResponseEntity.ok(result);
     }
 }
