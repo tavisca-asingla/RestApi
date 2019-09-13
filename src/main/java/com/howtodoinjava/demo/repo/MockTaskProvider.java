@@ -4,6 +4,7 @@ import com.howtodoinjava.demo.model.TaskDto;
 import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
 public class MockTaskProvider {
     private List<Task> mockTaskStore;
@@ -27,7 +28,8 @@ public class MockTaskProvider {
         return null;
     }
     public boolean add(TaskDto dto) {
-        return mockTaskStore.add(Task.of(dto.getId(), dto.getName()));
+        return mockTaskStore.add(Task.of(dto.getId(), dto.getName
+                ()));
     }
     public Task delete(long id) {
         int idx = 0;
